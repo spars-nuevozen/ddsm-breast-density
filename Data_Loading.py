@@ -3,6 +3,9 @@
 
 # In[1]:
 
+'''
+Put the mass_roi_train.csv, mass_roi_train_images and mass_roi_test_images at the same path where this script lies, and to load the dataset for keras change 
+'''
 
 import keras
 import os
