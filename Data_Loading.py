@@ -4,7 +4,8 @@
 # In[1]:
 
 '''
-Put the mass_roi_train.csv, mass_roi_train_images and mass_roi_test_images at the same path where this script lies, and to load the dataset for keras change 
+Put the mass_roi_train.csv, mass_roi_train_images and mass_roi_test_images at the same path where this script lies, and
+to load the dataset ,change the variable data_directory
 '''
 
 import keras
@@ -28,19 +29,19 @@ data['breast_density'].unique()
 
 
 # In[11]:
-
+data_directory = '/home/nuevozen/roi_dataset_breast_density/'
 
 train = 'mass_roi_train_images/'
 test = 'mass_roi_test_images/'
 for i in data.values:
     if i[1] == 3:
-        shutil.copy(train+i[0], "/home/nuevozen/roi_dataset_breast_density/train/3/")
+        shutil.copy(train+i[0], data_directory+"train/3/")
     elif i[1] == 2:
-        shutil.copy(train+i[0], "/home/nuevozen/roi_dataset_breast_density/train/2/")
+        shutil.copy(train+i[0], data_directory+"train/2/")
     elif i[1] == 1:
-        shutil.copy(train+i[0], "/home/nuevozen/roi_dataset_breast_density/train/1/")
+        shutil.copy(train+i[0], data_directory+"train/1/")
     elif i[1] == 4:
-        shutil.copy(train+i[0], "/home/nuevozen/roi_dataset_breast_density/train/4/")
+        shutil.copy(train+i[0], data_directory+"train/4/")
 
 
 # In[4]:
@@ -52,13 +53,13 @@ data_test.head()
 print(data_test['breast_density'].unique())
 for i in data_test.values:
     if i[1] == 3:
-        shutil.copy(train+i[0], "/home/nuevozen/roi_dataset_breast_density/test/3/")
+        shutil.copy(train+i[0], data_directory+"test/3/")
     elif i[1] == 2:
-        shutil.copy(train+i[0], "/home/nuevozen/roi_dataset_breast_density/test/2/")
+        shutil.copy(train+i[0], data_directory+"test/2/")
     elif i[1] == 1:
-        shutil.copy(train+i[0], "/home/nuevozen/roi_dataset_breast_density/test/1/")
+        shutil.copy(train+i[0], data_directory+"test/1/")
     elif i[1] == 4:
-        shutil.copy(train+i[0], "/home/nuevozen/roi_dataset_breast_density/test/4/")
+        shutil.copy(train+i[0], data_directory+"test/4/")
 
 
 # In[18]:
