@@ -29,7 +29,7 @@ data['breast_density'].unique()
 
 train = 'mass_roi_train_images/'
 test = 'mass_roi_test_images/'
-'''for i in data.values:
+for i in data.values:
     if i[1] == 3:
         shutil.copy(train+i[0], "/home/nuevozen/roi_dataset_breast_density/train/3/")
     elif i[1] == 2:
@@ -55,7 +55,7 @@ for i in data_test.values:
     elif i[1] == 1:
         shutil.copy(train+i[0], "/home/nuevozen/roi_dataset_breast_density/test/1/")
     elif i[1] == 4:
-        shutil.copy(train+i[0], "/home/nuevozen/roi_dataset_breast_density/test/4/")'''
+        shutil.copy(train+i[0], "/home/nuevozen/roi_dataset_breast_density/test/4/")
 
 
 # In[18]:
